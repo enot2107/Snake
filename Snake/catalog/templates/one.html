@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<div>
+    <h1>{{snake.name}}</h1>
+    <h2>{{snake.species}}</h2>
+    <h2>{{snake.cost}}</h2>
+    <img src="{{snake.image.url}}">
+    <p>{{snake.description}}</p>
+    <p>{{snake.birthdate}}</p>
+    <p>{{snake.poison}}</p>
+    <p>{{snake.gender}}</p>
+    {% endfor %}
+</div>
+{% endblock %}

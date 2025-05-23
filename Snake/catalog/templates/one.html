@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
-<div>
-    <h1>{{snake.name}}</h1>
-    <h2>{{snake.species}}</h2>
-    <h2>{{snake.cost}}</h2>
-    <img src="{{snake.image.url}}">
-    <p>{{snake.description}}</p>
-    <p>{{snake.birthdate}}</p>
-    <p>{{snake.poison}}</p>
-    <p>{{snake.gender}}</p>
-    {% endfor %}
+<div class="background">
+    <div class="background_cart_one">
+    <h1 class="name">{{snake.name}}</h1>
+    <img class="photo_one" src="{{snake.image.url}}">
+    <h2 class="description">{{snake.description}}</h2>
+    <h2 class="species">{{snake.species}}</h2>
+    <h2 class="cost">{{snake.cost}}</h2>
+    <h1 class="poison">{{snake.poison}}</h1>
+    <h1 class="gender">{{snake.gender}}</h1>
+    </div>
 </div>
 {% endblock %}

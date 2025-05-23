@@ -1,0 +1,32 @@
+.background{
+    background-color:Yellow;}
+.background_cart_one{
+    background-color:GreenYellow;
+    color:Chocolate;
+    width:810px;
+    height:825px;}
+.background_cart_all{
+    background-color:GreenYellow;
+    color:Chocolate;
+    width:325px;
+    height:325px;}
+.name{
+    background-color:Orange;}
+.photo_all{
+    width:200px;
+    height:100px;}
+.photo_one{
+    width:750px;
+    height:500px;}
+.species{
+    color:Chocolate;}
+.cost{
+    color:Black;}
+.poison{
+    color:Red;}
+.gender{
+    color:Green;}
+body{
+    background-color:Yellow;}
+.description{
+    color: rgb(0, 0, 205);}

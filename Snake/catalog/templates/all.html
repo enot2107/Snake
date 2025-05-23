@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div style="background-color:Yellow;">
+<div class="background">
     {% for s in snake %}
-    <div style="background-color:GreenYellow;color:Chocolate;width:325px;height:325px;">
-    <h1 style="background-color:Orange;">{{s.name}}</h1>
-    <img style="width:200px;height:100px;" src="{{s.image.url}}">
-    <h2 style="color:Chocolate;">{{s.species}}</h2>
-    <h2 style="color:Black;">{{s.cost}}</h2>
-    <h1 style="color:Red;">{{s.poison}}</h1>
+    <div class="background_cart_all">
+    <a href="{% url 'catalog:return_one_snake' s.id %}"><h1 class="name">{{s.name}}</h1></a>
+    <img class="photo_all" src="{{s.image.url}}">
+    <h2 class="species">{{s.species}}</h2>
+    <h2 class="cost">{{s.cost}}</h2>
+    <h1 class="poison">{{s.poison}}</h1>
     </div>
     {% endfor %}
 </div>

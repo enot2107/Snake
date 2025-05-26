@@ -21,3 +21,8 @@ def sort_snakes_poison(request):
 def sort_snakes_not_poison(request):
     snake = Snake.objects.filter(poison=0)
     return render(request, 'all.html', {'snake': snake})
+
+
+def category(request, category_name):
+    snakes = Snake.objects.filter(category__name=category_name)
+    return render(request, 'all.html', {'snakes': snakes})

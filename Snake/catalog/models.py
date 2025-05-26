@@ -4,6 +4,16 @@ genders = [('Жен', 'Жен'), ('Муж', 'Муж')]
 poison = [('Не яд', 'Не яд'), ('Яд', 'Яд')]
 
 
+class Category(models.Model):
+    name = models.CharField(max_length=30, verbose_name='Категория')
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        ordering = ['name']
+
+
 class Snake(models.Model):
     name = models.CharField(max_length=30, verbose_name='Название')
     species = models.CharField(max_length=30, verbose_name='Вид')
@@ -15,6 +25,7 @@ class Snake(models.Model):
     gender = models.CharField(choices=genders, verbose_name='Пол')
     created = models.DateTimeField(auto_now_add=True, verbose_name='Создано')
     updated = models.DateTimeField(auto_now=True, verbose_name='Обновлено')
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):
         return self.name
